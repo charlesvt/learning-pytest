@@ -4,10 +4,10 @@ app = FastAPI()
 
 test_data = {
     "test0": "qwerty",
-    "test1": "uiopas",
-    "test2": "asdfgh",
-    "test3": "jklzxc",
-    "test4": "vbnm"
+    "test1": "uiopa",
+    "test2": "sdfgh",
+    "test3": "jklzx",
+    "test4": "cvbnm"
 }
 
 @app.get("/")

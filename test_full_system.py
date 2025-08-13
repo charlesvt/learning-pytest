@@ -5,7 +5,7 @@ ser = serial.Serial("COM4", 9600)
 
 def get_test_string():
     BASE_URL = "http://127.0.0.1:8000"
-    ENDPOINT = "/test4"
+    ENDPOINT = "/test2"
     response = requests.get(BASE_URL + ENDPOINT)
     test_string = response.json()["test_string"]
     return test_string
@@ -22,3 +22,5 @@ def test_word():
     test_string = get_test_string()
     print("Enter the following string of characters:\"" + test_string + "\"")
     assert get_string_in(test_string) == test_string
+
+# run pytest -vs test_full_system.py

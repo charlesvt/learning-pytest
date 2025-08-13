@@ -2,8 +2,6 @@ from fastapi import FastAPI
  
 app = FastAPI()
 
-
-# Define data for each test
 test_data = {
     "test0": "qwerty",
     "test1": "uiopas",
@@ -11,6 +9,10 @@ test_data = {
     "test3": "jklzxc",
     "test4": "vbnm"
 }
+
+@app.get("/")
+def root():
+    return {"message":"Hello!"}
 
 @app.get("/test0")
 def test0_endpoint():
@@ -31,3 +33,5 @@ def test3_endpoint():
 @app.get("/test4")
 def test4_endpoint():
     return {"test_string": test_data["test4"]}
+
+# run uvicorn server:app

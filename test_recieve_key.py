@@ -3,6 +3,7 @@ import serial
 ser = serial.Serial("COM4", 9600)
 
 word = ""
+amazing_passcode = "potato"
 
 def get_word(word):
     for i in range(6):
@@ -15,7 +16,3 @@ def test_word():
     assert get_word(word) == amazing_passcode
 
 # command: pytest -s test_recieve_key.py
-
-
-
-amazing_passcode = "potato"
